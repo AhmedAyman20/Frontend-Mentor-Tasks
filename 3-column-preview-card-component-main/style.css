@@ -1,0 +1,181 @@
+:root{
+    --clr-primary-brightOrange: hsl(31, 77%, 52%);
+    --clr-primary-darkcyan: hsl(184, 100%, 22%);
+    --clr-primary-vdarkcyan: hsl(179, 100%, 13%);
+
+    --clr-neutral-whiteParag: hsla(0, 0%, 100%, 0.75);
+    --clr-neutral-VlightGrey: hsl(0, 0%, 95%);
+
+    --ff-Lexend : 'Lexend Deca', sans-serif;
+    --ff-bigShoulders: 'Big Shoulders Display', cursive;
+
+    --fw-bold: 700;
+    --fw-light: 400;
+}
+
+/*
+1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+box-sizing: border-box;
+}
+/*
+2. Remove default margin
+*/
+* {
+margin: 0;
+}
+/*
+3. Allow percentage-based heights in the application
+*/
+html, body {
+height: 100%;
+}
+/*
+Typographic tweaks!
+4. Add accessible line-height
+5. Improve text rendering
+*/
+body {
+line-height: 1.7;
+-webkit-font-smoothing: antialiased;
+}
+/*
+6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+display: block;
+max-width: 100%;
+}
+/*
+7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+font: inherit;
+}
+/*
+8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+overflow-wrap: break-word;
+}
+
+h1, h2, h3{
+    line-height: 1;
+}
+
+body{
+    --padding-content: 3rem;
+    margin: 1.2rem;
+    text-align: left;
+    font-family: var(--ff-Lexend);
+    font-weight: var(--fw-light);
+    color: var(--clr-neutral-whiteParag);
+    display: grid;
+    place-content: center;
+}
+
+.title{
+    font-weight: var(--fw-bold);
+    text-transform: uppercase;
+    color: var(--clr-neutral-VlightGrey);
+    font-size: 3rem;
+    font-family: var(--ff-bigShoulders);
+
+}
+
+.sedans{
+    display: grid;
+    row-gap: 1rem;
+    padding: var(--padding-content);
+    background-color: var(--clr-primary-brightOrange);
+}
+
+.sedans::before{
+    content: url(/images/icon-sedans.svg);
+}
+
+.sedans span{
+    background-color: var(--clr-neutral-VlightGrey);
+    color: var(--clr-primary-brightOrange);
+    text-align: center;
+    padding: 7px 0;
+    height: 3rem;
+    width: 10rem;
+    border-radius: 3rem;
+    border: 3px solid white;
+
+}
+
+.sedans span:hover{
+    cursor: pointer;
+    background-color: var(--clr-primary-brightOrange);
+    color: var(--clr-neutral-VlightGrey);
+}
+
+/*---------------------------------------*/
+
+.suvs{
+    display: grid;
+    row-gap: 1rem;
+    padding: var(--padding-content);
+    background-color: var(--clr-primary-darkcyan);
+}
+
+.suvs::before{
+    content: url(/images/icon-suvs.svg);
+}
+
+.suvs span{
+    background-color: var(--clr-neutral-VlightGrey);
+    color: var(--clr-primary-darkcyan);
+    text-align: center;
+    padding: 7px 0;    
+    height: 3rem;
+    width: 10rem;
+    border-radius: 2rem;
+    border: 3px solid white;
+}
+
+.suvs span:hover{
+    cursor: pointer;
+    background-color: var(--clr-primary-darkcyan);
+    color: var(--clr-neutral-VlightGrey);
+}
+
+/*----------------------------------------*/
+
+.luxury{
+    display: grid;
+    row-gap: 1rem;
+    padding: var(--padding-content);
+    background-color: var(--clr-primary-vdarkcyan);
+}
+
+.luxury::before{
+    content: url(/images/icon-luxury.svg);
+}
+
+.luxury span{
+    background-color: var(--clr-neutral-VlightGrey);
+    color: var(--clr-primary-vdarkcyan);
+    text-align: center;
+    padding: 7px 0; 
+    height: 3rem;
+    width: 10rem;
+    border-radius: 3rem;
+    border: 3px solid white;
+}
+.luxury span:hover{
+    cursor: pointer;
+    background-color: var(--clr-primary-vdarkcyan);
+    color: var(--clr-neutral-VlightGrey);
+}
+
+@media (min-width: 600px) {
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: center;
+    }
+}   
